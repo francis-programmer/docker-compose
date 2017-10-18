@@ -11,7 +11,7 @@ services:
       - "c:/teamcity/data:C:/ProgramData/JetBrains/TeamCity"
     ports:
       - "8111:8111"
-    hostname: teamcity
+    container_name: teamcity
 
   buildAgentOne:
     image: jetbrains/teamcity-agent:latest-windowsservercore
