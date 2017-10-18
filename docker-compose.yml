@@ -19,7 +19,7 @@ services:
     volumes:
       - "c:/teamcity/agentConfig:C:/TeamCity/logs"
 
-  networks:
+networks:
     default:
       external:
         name: nat
