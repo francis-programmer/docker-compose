@@ -11,11 +11,12 @@ services:
       - "c:/teamcity/data:C:/ProgramData/JetBrains/TeamCity"
     ports:
       - "8111:8111"
+    hostname: teamcity
 
   buildAgentOne:
     image: jetbrains/teamcity-agent:latest-windowsservercore
     environment:
-      - server_url=http://172.23.175.249:8111
+      - server_url=http:teamcity:8111
     volumes:
       - "c:/teamcity/agentConfig:C:/TeamCity/logs"
 
