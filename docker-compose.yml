@@ -18,3 +18,8 @@ services:
       - server_url=http://172.23.175.249:8111
     volumes:
       - "c:/teamcity/agentConfig:C:/TeamCity/logs"
+
+  networks:
+    default:
+      external:
+        name: nat
